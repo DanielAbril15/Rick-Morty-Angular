@@ -1,6 +1,19 @@
-<div [ngStyle]="{
-  'color':'white',
-  'width.px': 100
-}">
-  HOLA
-</div>
+<section class="card">
+  <div class='card__status'>
+    <span class=''></span>
+    {{character.status}}
+  </div>
+  <figure>
+    <img src='{{character.image}}' alt='' />
+  </figure>
+  <p class="name">{{character.name}}</p>
+  <p>
+    Species: <span> {{character.species}}</span>
+  </p>
+  <p>
+    Origin: <span>{{character.origin.name}}</span>
+  </p>
+  <p>
+    Episodes:<span>{{character.episode.length}}</span>
+  </p>
+</section>

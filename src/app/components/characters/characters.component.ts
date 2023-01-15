@@ -17,7 +17,6 @@ export class CharactersComponent implements OnInit {
     this.characterService.getAllCharacters().subscribe((data) => {
       this.api = data;
       this.characters = this.api.results;
-      console.log(this.characters);
     });
   }
 }

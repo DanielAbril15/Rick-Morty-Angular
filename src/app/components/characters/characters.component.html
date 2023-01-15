@@ -1,2 +1,3 @@
-<p>characters works!</p>
-<app-card-character *ngFor="let character of characters"></app-card-character>
+<section class="cards-container">
+  <app-card-character *ngFor="let character of characters" [character]="character"></app-card-character>
+</section>
