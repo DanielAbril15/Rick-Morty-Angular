@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from '../../models/api.model';
-import { Character } from '../../models/character.model';
-import { CharactersService } from '../../services/characters.service';
+import { LocationService } from '../../services/location.service';
 
 @Component({
   selector: 'app-characters',
@@ -10,13 +9,14 @@ import { CharactersService } from '../../services/characters.service';
 })
 export class CharactersComponent implements OnInit {
   api!: Api;
-  characters: Character[] = [];
-  constructor(private characterService: CharactersService) {}
+  urlCharacters = [];
+  urlCharacter: string = '';
+  constructor(private locationService: LocationService) {}
 
   ngOnInit(): void {
-    this.characterService.getAllCharacters().subscribe((data) => {
+    this.locationService.getLocation().subscribe((data) => {
       this.api = data;
-      this.characters = this.api.results;
+      this.urlCharacters = this.api.residents;
     });
   }
 }

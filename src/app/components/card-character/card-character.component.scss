@@ -1,0 +1,63 @@
+.card {
+  max-width: 200px;
+  height: 380px;
+  display: grid;
+  gap: 6px;
+  position: relative;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgb(9, 66, 0);
+}
+.card:hover {
+  scale: 1.03;
+  transition: scale 200ms;
+}
+figure {
+  width: 100%;
+
+  img {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+  }
+}
+p {
+  margin-left: 10px;
+  color: #8a8888;
+}
+.card__status {
+  position: absolute;
+  top: 20px;
+  width: 66px;
+  height: 21px;
+  color: var(--letter-color);
+  background-color: rgb(9, 66, 0);
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 5px 5px 0px;
+  .status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .unknown {
+    background-color: #ffffff;
+  }
+  .Alive {
+    background-color: #05fb42;
+  }
+  .Dead {
+    background-color: #ff0000;
+  }
+}
+.card__status--unknown {
+  width: 90px;
+}
+.name {
+  color: hsl(187, 91%, 41%);
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Shadows Into Light", cursive;
+}
