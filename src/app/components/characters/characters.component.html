@@ -1,4 +1,11 @@
-<section class="cards-container">
-  <h2></h2>
+<div class="title">
+  <h2>{{api.name}}</h2>
+  <h3>Universe {{api.id}}</h3>
+  <p>Poblation: {{api.residents.length}}</p>
+</div>
+<section *ngIf="api.residents.length > 0 ; else emptyBlock" class="cards-container">
   <app-card-character *ngFor="let urlCharacter of urlCharacters" [urlCharacter]="urlCharacter"></app-card-character>
 </section>
+<ng-template #emptyBlock>
+  <img src="../../../assets/header.png" alt="">
+</ng-template>
